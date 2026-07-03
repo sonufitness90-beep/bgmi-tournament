@@ -242,3 +242,33 @@ saveNotice.addEventListener("click",async()=>{
 });
 
 loadPlayers();
+
+window.copyRoomId = function(id){
+
+    const team = allTeams.find(t => t.id === id);
+
+    if(!team || !team.roomId){
+        alert("Room ID not set");
+        return;
+    }
+
+    navigator.clipboard.writeText(team.roomId);
+
+    alert("📋 Room ID Copied");
+
+};
+
+window.copyRoomPass = function(id){
+
+    const team = allTeams.find(t => t.id === id);
+
+    if(!team || !team.roomPass){
+        alert("Room Password not set");
+        return;
+    }
+
+    navigator.clipboard.writeText(team.roomPass);
+
+    alert("🔑 Room Password Copied");
+
+};
