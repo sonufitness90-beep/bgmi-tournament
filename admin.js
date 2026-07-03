@@ -116,6 +116,9 @@ approvedDiv.innerHTML += html + "</div>";
 html += `
 
 <p><b>Status :</b> 🟡 Pending Approval</p>
+<button onclick="viewScreenshot('${data.paymentScreenshot}')">
+📸 View Screenshot
+</button>
 
 <button onclick="approvePlayer('${id}')">
 ✅ Approve Team
