@@ -65,19 +65,6 @@ const uploadResponse = await fetch(
 const uploadData = await uploadResponse.json();
 
 const screenshotUrl = uploadData.secure_url;
-const fileName =
-Date.now()+"_"+bgmi+"_"+file.name;
-
-const imageRef =
-storageRef(
-storage,
-"paymentScreenshots/"+fileName
-);
-
-await uploadBytes(imageRef,file);
-
-const screenshotUrl =
-await getDownloadURL(imageRef);
 
   try {
 
