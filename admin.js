@@ -246,6 +246,17 @@ saveNotice.addEventListener("click",async()=>{
 
 loadPlayers();
 
+window.viewScreenshot = function(url){
+
+    if (!url) {
+        alert("❌ Screenshot not uploaded");
+        return;
+    }
+
+    window.open(url, "_blank");
+
+};
+
 window.copyRoomId = function(id){
 
     const team = allTeams.find(t => t.id === id);
