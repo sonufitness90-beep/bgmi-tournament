@@ -75,6 +75,7 @@ function loadPlayers() {
 
         <button onclick="deletePlayer('${id}')">
         🗑 Delete Team
+    
         </button>
         `;
 
@@ -87,3 +88,64 @@ function loadPlayers() {
   });
 
 }
+window.approvePlayer = async function(id) {
+
+  const ok = confirm("Approve this team?");
+  if (!ok) return;
+
+  try {
+
+    await update(ref(db, "players/" + id), {
+      approved: true,
+      paymentVerified: true
+    });
+
+    alert("✅ Team Approved");
+
+  } catch (error) {
+    alert(error.message);
+  }
+
+};
+
+window.setRoom = async function(id) {
+
+  const roomId = prompt("Enter Room ID");
+  if (roomId === null) return;
+
+  const roomPass = prompt("Enter Room Password");
+  if (roomPass === null) return;
+
+  try {
+
+    await update(ref(db, "players/" + id), {
+      roomId: roomId,
+      roomPass: roomPass
+    });
+
+    alert("✅ Room Details Saved");
+
+  } catch (error) {
+    alert(error.message);
+  }
+
+};
+
+window.deletePlayer = async function(id) {
+
+  const ok = confirm("Delete this team?");
+  if (!ok) return;
+
+  try {
+
+    await remove(ref(db, "players/" + id));
+
+    alert("🗑 Team Deleted");
+
+  } catch (error) {
+    alert(error.message);
+  }
+
+};
+
+loadPlayers();
