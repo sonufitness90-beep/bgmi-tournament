@@ -49,7 +49,22 @@ return;
 }
 
 const file = screenshot.files[0];
+const formData = new FormData();
 
+formData.append("file", file);
+formData.append("upload_preset", "bgmi_upload");
+
+const uploadResponse = await fetch(
+  "https://api.cloudinary.com/v1_1/vm140tef/image/upload",
+  {
+    method: "POST",
+    body: formData
+  }
+);
+
+const uploadData = await uploadResponse.json();
+
+const screenshotUrl = uploadData.secure_url;
 const fileName =
 Date.now()+"_"+bgmi+"_"+file.name;
 
