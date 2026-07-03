@@ -198,8 +198,12 @@ window.setRoom = async function(id){
 
 window.deletePlayer = async function(id){
 
-    const ok = confirm("Delete this Team?");
-    if(!ok) return;
+    const teamName = prompt("Type DELETE to confirm team deletion");
+
+if (teamName !== "DELETE") {
+    alert("❌ Deletion cancelled");
+    return;
+}
 
     try{
 
