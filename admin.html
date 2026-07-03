@@ -1,1 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BGMI Tournament Admin Panel</title>
 
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🏆 BGMI Tournament Admin Panel</h1>
+
+<p class="subtitle">
+Manage Tournament Teams Easily
+</p>
+
+<!-- Dashboard -->
+
+<div class="dashboard">
+
+<div class="card dashboard-card">
+<h3>👥 Total Teams</h3>
+<h2 id="totalTeams">0</h2>
+</div>
+
+<div class="card dashboard-card">
+<h3>🟡 Pending</h3>
+<h2 id="pendingCount">0</h2>
+</div>
+
+<div class="card dashboard-card">
+<h3>🟢 Approved</h3>
+<h2 id="approvedCount">0</h2>
+</div>
+
+</div>
+
+<!-- Search -->
+
+<div class="card">
+
+<h2>🔍 Search Team</h2>
+
+<input
+type="text"
+id="searchInput"
+placeholder="Search Team / BGMI UID">
+
+</div>
+
+<!-- Pending -->
+
+<div class="card">
+
+<h2>⏳ Pending Teams</h2>
+
+<div id="pendingPlayers">
+
+Loading...
+
+</div>
+
+</div>
+
+<!-- Approved -->
+
+<div class="card">
+
+<h2>✅ Approved Teams</h2>
+
+<div id="approvedPlayers">
+
+Loading...
+
+</div>
+
+</div>
+
+<!-- Notice -->
+
+<div class="card">
+
+<h2>📢 Tournament Notice</h2>
+
+<textarea
+id="notice"
+rows="4"
+placeholder="Write Tournament Notice..."></textarea>
+
+<button id="saveNotice">
+
+💾 Save Notice
+
+</button>
+
+</div>
+
+<a href="index.html" class="btn">
+
+🏠 Back Home
+
+</a>
+
+</div>
+
+<script type="module" src="admin.js"></script>
+
+</body>
+</html>
