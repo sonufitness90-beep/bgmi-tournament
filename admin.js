@@ -95,6 +95,14 @@ let html=`
 🎮 Set Room
 </button>
 
+<button onclick="copyRoomId('${id}')">
+📋 Copy Room ID
+</button>
+
+<button onclick="copyRoomPass('${id}')">
+🔑 Copy Password
+</button>
+
 <button onclick="deletePlayer('${id}')">
 🗑 Delete Team
 </button>
