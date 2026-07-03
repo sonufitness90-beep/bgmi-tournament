@@ -116,15 +116,14 @@ img{
 .player button{
     margin:14px 0;
 }
-
 .player button:first-of-type{
-    margin-top:18px;
-    margin-bottom:14px;
+    margin-top:16px;
+    margin-bottom:6px;
 }
 
 .player button:last-of-type{
-    margin-top:14px;
-    margin-bottom:6px;
+    margin-top:6px;
+    margin-bottom:0;
 }
 
 /* Mobile */
