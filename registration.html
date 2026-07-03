@@ -52,24 +52,25 @@ placeholder="💰 Entry Fee">
 Scan the QR Code and complete the payment before registration.
 </p>
 
+<label for="paymentScreenshot">
+
 <img
 src="qr.png"
 alt="QR Code"
-class="qr-image">
+class="qr-image"
+style="cursor:pointer;">
 
-  <input
-type="text"
-id="utr"
-placeholder="💳 Enter UTR Number">
-
-<label class="upload-label">
-📸 Upload Payment Screenshot
 </label>
+
+<p style="text-align:center;">
+📸 QR पर क्लिक करके Payment Screenshot चुनें
+</p>
 
 <input
 type="file"
 id="paymentScreenshot"
-accept="image/*">
+accept="image/*"
+style="display:none;">
 
 <button id="registerBtn">
 
