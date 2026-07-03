@@ -44,3 +44,46 @@ function loadPlayers() {
 
       <p><b>UTR:</b> ${data.utr}</p>
       `;
+      if (data.approved) {
+
+        html += `
+        <p><b>Status:</b> 🟢 Approved</p>
+
+        <p><b>Room ID:</b> ${data.roomId || "Not Set"}</p>
+
+        <p><b>Room Password:</b> ${data.roomPass || "Not Set"}</p>
+
+        <button onclick="setRoom('${id}')">
+        🎮 Set Room
+        </button>
+
+        <button onclick="deletePlayer('${id}')">
+        🗑 Delete Team
+        </button>
+        `;
+
+        approvedDiv.innerHTML += html + "</div>";
+
+      } else {
+
+        html += `
+        <p><b>Status:</b> 🟡 Pending</p>
+
+        <button onclick="approvePlayer('${id}')">
+        ✅ Approve Team
+        </button>
+
+        <button onclick="deletePlayer('${id}')">
+        🗑 Delete Team
+        </button>
+        `;
+
+        pendingDiv.innerHTML += html + "</div>";
+
+      }
+
+    });
+
+  });
+
+}
