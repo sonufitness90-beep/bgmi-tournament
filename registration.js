@@ -92,7 +92,7 @@ await getDownloadURL(imageRef);
 
     utr: utr,
 
-    paymentScreenshot: screenshotUrl,
+   paymentScreenshot: screenshotUrl,
 
     approved: false,
 
