@@ -1,1 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>BGMI Team Registration</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="card">
+
+<h1>🏆 BGMI Team Registration</h1>
+
+<p class="subtitle">
+Fill all details carefully before registering.
+</p>
+
+<input
+type="text"
+id="team"
+placeholder="🏆 Team Name">
+
+<input
+type="text"
+id="captain"
+placeholder="👤 Captain Name">
+
+<input
+type="text"
+id="bgmi"
+placeholder="🎮 BGMI UID">
+
+<input
+type="tel"
+id="phone"
+placeholder="📱 Phone Number">
+
+<input
+type="number"
+id="entryFee"
+placeholder="💰 Entry Fee">
+
+<h2>💳 Payment</h2>
+
+<p class="payment-text">
+Scan the QR Code and complete the payment before registration.
+</p>
+
+<img
+src="qr.png"
+alt="QR Code"
+class="qr-image">
+
+  <input
+type="text"
+id="utr"
+placeholder="💳 Enter UTR Number">
+
+<label class="upload-label">
+📸 Upload Payment Screenshot
+</label>
+
+<input
+type="file"
+id="paymentScreenshot"
+accept="image/*">
+
+<button id="registerBtn">
+
+✅ Register Team
+
+</button>
+
+<br>
+
+<a
+href="index.html"
+class="btn">
+
+⬅ Back Home
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h2>📢 Tournament Rules</h2>
+
+<ul class="rules">
+
+<li>✅ One Team = One Registration</li>
+
+<li>✅ Correct BGMI UID Required</li>
+
+<li>✅ Payment Required Before Registration</li>
+
+<li>✅ Enter Correct UTR Number</li>
+
+<li>✅ Upload Payment Screenshot</li>
+
+<li>✅ Wait For Admin Approval</li>
+
+<li>✅ Room ID & Password After Approval</li>
+
+</ul>
+
+</div>
+
+  <script type="module" src="registration.js"></script>
+
+</div>
+
+</body>
+</html>
