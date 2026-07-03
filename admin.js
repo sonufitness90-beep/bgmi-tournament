@@ -81,3 +81,74 @@ let html=`
 
 <p><b>UTR :</b> ${data.utr || "N/A"}</p>
 `;
+      if (data.approved) {
+
+        html += `
+
+<p><b>Status :</b> 🟢 Approved</p>
+
+<p><b>Room ID :</b> ${data.roomId || "Not Set"}</p>
+
+<p><b>Room Password :</b> ${data.roomPass || "Not Set"}</p>
+
+<button onclick="setRoom('${id}')">
+🎮 Set Room
+</button>
+
+<button onclick="deletePlayer('${id}')">
+🗑 Delete Team
+</button>
+
+`;
+
+approvedDiv.innerHTML += html + "</div>";
+
+}else{
+
+html += `
+
+<p><b>Status :</b> 🟡 Pending Approval</p>
+
+<button onclick="approvePlayer('${id}')">
+✅ Approve Team
+</button>
+
+<button onclick="deletePlayer('${id}')">
+🗑 Delete Team
+</button>
+
+`;
+
+pendingDiv.innerHTML += html + "</div>";
+
+}
+
+});
+
+totalTeams.innerText=total;
+pendingCount.innerText=pending;
+approvedCount.innerText=approved;
+
+});
+
+}
+
+searchInput.addEventListener("keyup",()=>{
+
+const value=searchInput.value.toLowerCase();
+
+document.querySelectorAll(".player").forEach(card=>{
+
+if(card.innerText.toLowerCase().includes(value)){
+
+card.style.display="block";
+
+}else{
+
+card.style.display="none";
+
+}
+
+});
+
+});
