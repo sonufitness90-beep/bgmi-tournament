@@ -39,3 +39,11 @@ const timer = setInterval(function () {
       "🔴 Match Started! Join Room Now";
   }
 }, 1000);
+
+const joinBtn = document.querySelector(".btn");
+
+if (joinBtn) {
+  joinBtn.addEventListener("click", () => {
+    window.location.href = "register.html";
+  });
+}
