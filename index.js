@@ -44,6 +44,6 @@ const joinBtn = document.querySelector(".btn");
 
 if (joinBtn) {
   joinBtn.addEventListener("click", () => {
-    window.location.href = "register.html";
+    window.location.href = "registration.html";
   });
 }
