@@ -7,9 +7,28 @@
 
 <link rel="stylesheet" href="style.css">
 </head>
+</div>
 
+<script>
+function loginAdmin() {
+  const password = document.getElementById("adminPassword").value;
+
+  if (password === "123456") {
+    document.getElementById("loginBox").style.display = "none";
+    document.getElementById("adminPanel").style.display = "block";
+  } else {
+    alert("❌ Wrong Password");
+  }
+}
+</script>
 <body>
+<div id="loginBox">
+  <h2>🔐 Admin Login</h2>
+  <input type="password" id="adminPassword" placeholder="Enter Admin Password">
+  <button onclick="loginAdmin()">Login</button>
+</div>
 
+<div id="adminPanel" style="display:none;">
 <div class="container">
 
 <h1>🏆 BGMI Tournament Admin Panel</h1>
