@@ -291,3 +291,18 @@ h2{
 }
 
 }
+
+.countdown-section {
+  text-align: center;
+  background: #1b1b1b;
+  color: white;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 12px;
+}
+
+#countdown {
+  font-size: 28px;
+  font-weight: bold;
+  color: #00ff66;
+}
